@@ -4,6 +4,9 @@ export default {
   failed: "失败",
   enable: "启用",
   disable: "禁用",
+  none: "无",
+  all: "全部",
+  filter: "过滤器",
   loading: "加载中...",
   confirm: "是否确定？",
   yes: "确认",
@@ -314,6 +317,7 @@ export default {
       final: "最终",
       server: "服务器",
       firstServer: "首选服务器",
+      addrResolver: "地址解析器",
     },
     routing: {
       title: "路由",

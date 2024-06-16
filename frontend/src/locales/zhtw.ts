@@ -5,6 +5,9 @@ export default {
   failed: "失敗",
   enable: "啟用",
   disable: "禁用",
+  none: "無",
+  all: "全部",
+  filter: "過濾器",
   loading: "加載中...",
   confirm: "是否確定？",
   yes: "確認",
@@ -315,6 +318,7 @@ export default {
       final: "最終",
       server: "服務器",
       firstServer: "首選服務器",
+      addrResolver: "地址解析器",
     },
     routing: {
       title: "路由",

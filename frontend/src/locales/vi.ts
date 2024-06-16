@@ -4,6 +4,9 @@ export default {
   failed: "Thất bại",
   enable: "Kích hoạt",
   disable: "Vô hiệu hóa",
+  none: "Không",
+  all: "Tất cả",
+  filter: "Bộ lọc",
   loading: "Đang tải...",
   confirm: "Bạn chắc chắn chứ?",
   yes: "có",
@@ -314,6 +317,7 @@ export default {
       final: "Cuối cùng",
       server: "Máy chủ",
       firstServer: "Máy chủ Đầu tiên",
+      addrResolver: "Trình phân giải địa chỉ",
     },
     routing: {
       title: "Định tuyến",

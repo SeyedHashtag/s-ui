@@ -4,6 +4,9 @@ export default {
   failed: "خطا",
   enable: "فعال",
   disable: "غیرفعال",
+  none: "هیچ",
+  all: "همه",
+  filter: "فیلتر",
   loading: "در حال بارگذاری...",
   confirm: "آیا مطمئن هستید ؟",
   yes: "بله",
@@ -312,6 +315,7 @@ export default {
       final: "سرور نهایی",
       server: "سرور",
       firstServer: "سرور نخست",
+      addrResolver: "حل کننده دامنه",
     },
     routing: {
       title: "مسیریابی",

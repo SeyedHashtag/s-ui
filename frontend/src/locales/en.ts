@@ -4,6 +4,9 @@ export default {
   failed: "failed",
   enable: "Enable",
   disable: "Disable",
+  none: "None",
+  all: "All",
+  filter: "Filter",
   loading: "Loading...",
   confirm: "Are you sure ?",
   yes: "yes",
@@ -313,6 +316,7 @@ export default {
       final: "Final",
       server: "Server",
       firstServer: "First Server",
+      addrResolver: "Address Resolver",
     },
     routing: {
       title: "Routing",
