@@ -40,7 +40,7 @@
   </v-row>
   <v-row>
     <template v-for="(item, index) in clients" :key="item.id">
-      <v-col cols="12" sm="4" md="3" lg="2" v-if="checkFilter(item)">
+      <v-col cols="12" sm="4" md="3" lg="2" :style="checkFilter(item)? '' : 'opacity: .2'">
         <v-card rounded="xl" elevation="5" min-width="200">
           <v-card-title>
             <v-row>
@@ -128,8 +128,14 @@
                 </v-card-actions>
               </v-card>
             </v-overlay>
-            <v-btn icon="mdi-qrcode" @click="showQrCode(index)" />
-            <v-btn icon="mdi-chart-line" @click="showStats(item.name)" />
+            <v-btn icon="mdi-qrcode" @click="showQrCode(index)">
+              <v-icon />
+              <v-tooltip activator="parent" location="top" text="QR-Code"></v-tooltip>
+            </v-btn>
+            <v-btn icon="mdi-chart-line" @click="showStats(item.name)" v-if="v2rayStats.users.includes(item.name)">
+              <v-icon />
+              <v-tooltip activator="parent" location="top" :text="$t('stats.graphTitle')"></v-tooltip>
+            </v-btn>
           </v-card-actions>
         </v-card>      
       </v-col>

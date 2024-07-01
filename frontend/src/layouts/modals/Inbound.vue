@@ -5,7 +5,7 @@
         {{ $t('actions.' + title) + " " + $t('objects.inbound') }}
       </v-card-title>
       <v-divider></v-divider>
-      <v-card-text style="padding-top: 0; overflow-y: scroll;">
+      <v-card-text style="padding: 0 16px; overflow-y: scroll;">
         <v-container style="padding: 0;">
           <v-row>
             <v-col cols="12" sm="6" md="4">
@@ -28,8 +28,8 @@
             fixed-tabs
             align-tabs="center"
           >
-            <v-tab value="s">Server Side</v-tab>
-            <v-tab value="c">Client Side</v-tab>
+            <v-tab value="s">{{ $t('in.sSide') }}</v-tab>
+            <v-tab value="c">{{ $t('in.cSide') }}</v-tab>
           </v-tabs>
           <v-window v-model="side" style="margin-top: 10px;">
             <v-window-item value="s">
@@ -51,17 +51,15 @@
             <v-window-item value="c">
               <OutJsonVue :inData="inData" :type="inbound.type" />
               <v-card>
-                <v-card-subtitle>
-                  Multi Domain
+                <v-card-subtitle>{{ $t('in.multiDomain') }}
                   <v-icon @click="add_addr" icon="mdi-plus"></v-icon>
                 </v-card-subtitle>
                 <template v-for="addr,index in inData.addrs">
-                  Address #{{ (index+1) }} <v-icon icon="mdi-delete" @click="inData.addrs.splice(index,1)" />
+                  {{ $t('in.addr') }} #{{ (index+1) }} <v-icon icon="mdi-delete" @click="inData.addrs.splice(index,1)" />
                   <v-divider></v-divider>
                   <AddrVue :addr="addr" :hasTls="Object.hasOwn(inbound,'tls')" />
                 </template>
               </v-card>
-              <pre dir="ltr">{{ inData }}</pre>
             </v-window-item>
           </v-window>
         </v-container>
